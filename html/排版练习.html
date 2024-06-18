@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>排版练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .leftfloat {
+            float: left;
+        }
+
+        .rightfloat {
+            float: right;
+        }
+
+        .clearfloat::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+
+        .big {
+            margin: 0 auto;
+            /* background-color: aquamarine; */
+            width: 960px;
+            text-align: center;
+        }
+
+        .logo,
+        .banner1,
+        .banner2 {
+            height: 80px;
+            background-color: #ccc;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        .banner1 {
+            margin: 0 10px;
+            width: 540px;
+        }
+
+        .banner2 {
+            width: 200px;
+        }
+
+        .caidan {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #ccc;
+            margin: 10px 0;
+        }
+        .item1,.item2{
+            width: 368px;
+            height: 198px;
+            border: black solid 1px;
+            margin-right: 10px;
+            line-height: 198px;
+        }
+        .item3,.item4,.item5,.item6{
+            height: 198px;
+            width: 178px;
+            line-height: 200px;
+            margin:10px 10px 0 0;
+            border: 1px black solid;
+        }
+        .item7,.item8,.item9{
+            height: 128px;
+            width: 198px;
+            border: 1px black solid;
+            line-height: 128px;
+        }
+        .item8{
+            margin: 10px 0;
+        }
+        .foot{
+            background-color: #ccc;
+            height: 60px;
+            line-height: 60px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div class="top clearfloat">
+            <div class="logo leftfloat">logo</div>
+            <div class="banner1 leftfloat">banner1</div>
+            <div class="banner2 leftfloat">banner2</div>
+        </div>
+        <div class="caidan">菜单</div>
+        <div class="main clearfloat">
+            <div class="left leftfloat">
+                <div class="top clearfloat">
+                    <div class="item1 leftfloat">栏目一</div>
+                    <div class="item2 rightfloat">栏目二</div>
+                </div>
+                <div class="bottom clearfloat">
+                    <div class="item3 leftfloat">栏目三</div>
+                    <div class="item4 leftfloat">栏目四</div>
+                    <div class="item5 leftfloat">栏目五</div>
+                    <div class="item6 leftfloat">栏目六</div>
+                </div>
+            </div>
+            <div class="right rightfloat">
+                <div class="item7">栏目七</div>
+                <div class="item8">栏目八</div>
+                <div class="item9">栏目九</div>
+            </div>
+        </div>
+        <div class="foot">页脚</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="#">
+            <div>
+                <input type="checkbox" name="happy" value="唱">唱
+                <input type="checkbox" name="happy" value="跳">跳
+                <input type="checkbox" name="happy" value="rap">rap
+                <input type="checkbox" name="happy" value="篮球">篮球
+            </div>
+            <div>
+                <button type="button" id="checkAll">全选</button>
+                <button type="button" id="noCheck">取消</button>
+                <button type="button" id="fanCheck">反选</button>
+                <button type="button" id="send">提交</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        //获取多选框
+        const happies = document.getElementsByName("happy");
+        //获取全选按钮
+        const allCheck = document.getElementById("checkAll");
+        //全选按钮实现
+        allCheck.addEventListener("click",function(){
+            for(let i = 0;i < happies.length;i++){
+                happies[i].checked = true;
+            }
+        })
+        //获取取消按钮
+        const noCheck = document.getElementById("noCheck");
+        //取消按钮实现
+        noCheck.addEventListener("click",function(){
+            for(let i = 0;i < happies.length;i++){
+                happies[i].checked = false;
+            }
+        })
+        //获取反选按钮
+        const fanCheck = document.getElementById("fanCheck");
+        //反选按钮实现
+        fanCheck.addEventListener("click",function(){
+            for(let i = 0;i < happies.length;i++){
+                happies[i].checked = !happies[i].checked;
+            }
+        })
+        //获取提交按钮
+        const send = document.getElementById("send");
+        //提交按钮实现
+        send.addEventListener("click",function(){
+            for(let i = 0;i < happies.length;i++){
+                if(happies[i].checked){
+                    alert(happies[i].value);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/登录.css">
+</head>
+
+<body>
+    <div class="control">
+        <div class="item">
+            <div class="active">登录</div>
+            <div>注册</div>
+        </div>
+        <div class="content">
+            <div style="display: block;">
+                <p>账号</p>
+                <input type="text" placeholder="请输入用户名" id="login-username" />
+                <p>密码</p>
+                <input type="password" placeholder="请输入密码" id="login-password" />
+                <br />
+                <input type="submit" value="登录" onclick="login()" />
+            </div>
+            <div>
+                <p>用户名</p>
+                <input type="text" placeholder="请输入用户名" id="register-username" />
+                <p>密码</p>
+                <input type="password" placeholder="请输入密码" id="register-password" />
+                <p>邮箱</p>
+                <input type="text" placeholder="请输入邮箱" id="register-email" />
+                <br />
+                <input type="submit" value="注册" onclick="register()" />
+            </div>
+        </div>
+    </div>
+    <script src="../js/登录.js"></script>
+</body>
+
+</html>
